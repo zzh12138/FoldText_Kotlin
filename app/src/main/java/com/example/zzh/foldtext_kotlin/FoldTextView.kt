@@ -178,7 +178,7 @@ class FoldTextView @JvmOverloads constructor(context: Context, attrs: AttributeS
             viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
                 override fun onGlobalLayout() {
                     viewTreeObserver.removeOnGlobalLayoutListener(this)
-                    translateText(l, type)
+                    translateText(layout, type)
                 }
             })
         } else {

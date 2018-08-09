@@ -131,7 +131,7 @@ class FoldTextView @JvmOverloads constructor(context: Context, attrs: AttributeS
             val spannable = SpannableStringBuilder(mOriginalText)
             if (isShowTipAfterExpand) {
                 spannable.append(mExpandText)
-                spannable.setSpan(ForegroundColorSpan(mTipColor), spannable.length - 5, spannable.length, Spanned.SPAN_INCLUSIVE_EXCLUSIVE)
+                spannable.setSpan(ForegroundColorSpan(mTipColor), spannable.length - mExpandText.length, spannable.length, Spanned.SPAN_INCLUSIVE_EXCLUSIVE)
             }
             super.setText(spannable, type)
             val mLieCount = lineCount
